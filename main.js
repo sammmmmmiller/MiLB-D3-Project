@@ -5,7 +5,6 @@ const h = 1100 - margin.top - margin.bottom;
 let container1 = d3.select("body").append("div").classed("svg-container", true)
 
 const buttonLabels = Array.from({ length: 31 }, (_, i) => `Button ${i + 1}`);
-  
 const table = container1.append("table")
 const tbody = table.append("tbody");
 
@@ -55,7 +54,7 @@ d3.csv('data/average_both.csv').then(function (data) {
 
     var area = d3.area()
         .x(function (d) { return x(parseInt(d["year"])); })
-        .y0(h) // The bottom of the area
+        .y0(h) 
         .y1(function (d) { return y(d["avgrev"] * 1000000); });
 
     svg.append("path")
@@ -111,7 +110,6 @@ d3.csv('data/average_both.csv').then(function (data) {
             .y(function (d) { return y(d["avgpay"] * 1000000); })
         );
 
-    
     svg.append("path")
         .datum(data)
         .attr("fill", "none")
@@ -175,7 +173,6 @@ container1.append("div")
   .style("text-align", "center")
   .style("font-size", "18px")
   .text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat massa sit amet nunc pretium finibus. Nulla facilisi. Praesent ut mollis orci. Integer sit amet arcu sapien. Integer eget aliquam nibh. Suspendisse non ipsum eget mauris venenatis pulvinar id et velit.");
-
 
   svg.append("rect")
   .attr("x", x(2019) - 50) 
