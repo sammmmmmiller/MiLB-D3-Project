@@ -10,7 +10,7 @@ h1 {
   color: white;
 }
 body {
-  background-color: rgb(255,99,71);
+  background-color: #BD1021;
 }
 
 .circular-button {
@@ -18,7 +18,7 @@ body {
     height: 40px;
     border: 2px solid #000;
     border-radius: 50%;
-    text-align: center;
+    text-align: center; 
     cursor: pointer;
     font-weight: bold;
     display: flex;
@@ -34,7 +34,7 @@ body {
 footer {
     position: fixed;
     bottom: 0;
-    background-color: black;
+    background-color: #002D72;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,4 +49,13 @@ footer {
     justify-content: center;
     gap: 25px;
     margin-bottom: 5%;
+}
+
+.no-click {
+  opacity: 0.3;
+}
+
+circle {
+  stroke: black;
+  stroke-width: 1;
 }
